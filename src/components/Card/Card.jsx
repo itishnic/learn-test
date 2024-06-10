@@ -10,7 +10,7 @@ const classNames = clsx(css.container, isOnline ? css.onLine : css.ofLine)
 
   return (
       <>
-          <div className={classNames}>
+          <li className={classNames}>
               <h2>Name:{name}</h2>
       <hr />
       <div>
@@ -19,7 +19,7 @@ const classNames = clsx(css.container, isOnline ? css.onLine : css.ofLine)
         <p>Website:{website}</p>
         <p>street:{address.street} </p>
               </div>
-          </div>
+          </li>
       <Button text='start'/>
           <hr />
     </>

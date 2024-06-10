@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.onLine {
+    display: none;
+}
+
+.ofLine {
+    display: block;
+}
