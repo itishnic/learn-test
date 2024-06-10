@@ -1,4 +1,5 @@
-const Feedback = ({ value }) => {
+const Feedback = ({ value }) => { if (value.good + value.neutral + value.bad) 
+
   return (
     <div>
       <p>Good:{value.good}</p>

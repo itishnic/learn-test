@@ -49,7 +49,11 @@ function App() {
   };
 
   const handleIncrementD = () => {
-    setState(0);
+    setState({
+      good: 0,
+      neutral: 0,
+      bad: 0,
+    });
   };
 
 
@@ -65,7 +69,7 @@ function App() {
   };
 
   let totalFeedback = state.good + state.neutral + state.bad;
-  const classNames = clsx(!totalFeedback ? css.onLine : css.ofLine);
+  // const classNames = clsx(!totalFeedback ? css.onLine : css.ofLine);
 
 
   return (
@@ -74,12 +78,10 @@ function App() {
       <CounterComponent value={"Good"} handleIncrement={handleIncrementA} />
       <CounterComponent value={"Neutral"} handleIncrement={handleIncrementB} />
       <CounterComponent value={"Bad"} handleIncrement={handleIncrementC} />
-      <CounterComponent
-        value={"Reset"}
-        handleIncrement={handleIncrementD}
-        // className={classNames}
-      />
-
+      {/* <CounterComponent value={"Reset"} handleIncrement={handleIncrementD} /> */}
+      {totalFeedback && (
+        <CounterComponent value={"Reset"} handleIncrement={handleIncrementD} />
+      )}
       {/* <button onClick={() => setState(0)}>Reset</button> */}
       {/* <button onClick={handleToggle}>{isOpen ? "Hide" : "Show"}</button> */}
       {!totalFeedback && <p>No feedback yet</p>}
