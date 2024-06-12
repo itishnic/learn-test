@@ -93,7 +93,7 @@ function App() {
 
   
 
-  let totalFeedback = state.good + state.neutral + state.bad;
+  const totalFeedback = state.good + state.neutral + state.bad;
   // const classNames = clsx(!totalFeedback ? css.onLine : css.ofLine);
 
 
