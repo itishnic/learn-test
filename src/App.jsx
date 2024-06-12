@@ -31,18 +31,17 @@ import Feedback from './components/Feedback/Feedback';
 
 function App() {
   const [state, setState] = useState(() => {
-    // Зчитуємо значення за ключем
+    
     const savedObject = window.localStorage.getItem("saved-clicks");
 
-    // Якщо там щось є, парсимо і повертаємо
-    // це значення як початкове значення стану
+    
+    
     if (savedObject !== null) {
       return JSON.parse(savedObject);
     }
 
-    // У протилежному випадку повертаємо
-    // яке-небудь значення за замовчуванням
-    return {};
+  
+    return 0 ;
   });
 
 
