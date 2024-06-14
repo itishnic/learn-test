@@ -14,7 +14,8 @@ const Feedback = ({ value }) => { if (value.good + value.neutral + value.bad)
         %
       </p>
     </div>
-  );
+  )
+    else return <p>No feedback yet</p>;
 };
 
 export default Feedback;
